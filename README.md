@@ -6,6 +6,8 @@ GitHub User Finder adalah aplikasi web sederhana yang memungkinkan pengguna menc
 
 Aplikasi ini bertujuan untuk memberikan pengalaman pencarian pengguna GitHub yang cepat dan intuitif. Setelah pengguna memasukkan nama pengguna, aplikasi akan melakukan request ke API GitHub, lalu menampilkan hasil pencarian dalam bentuk kartu profil dan daftar repository.
 
+linknya disini, silahkan dicek: https://github-user-finder-harisss132.netlify.app
+
 ## Fitur Utama
 
 - Mencari pengguna GitHub berdasarkan username

@@ -37,11 +37,7 @@ function App() {
     async function fetchGithubData() {
       setLoading(true);
       try {
-        const headers = {
-          Authorization: `Bearer ${import.meta.env.VITE_GITHUB_TOKEN}`,
-        };
-
-        const searchRes = await fetch(`https://api.github.com/search/users?q=${debounceTerm}`, {headers, signal})
+        const searchRes = await fetch(`https://api.github.com/search/users?q=${debounceTerm}`, {signal})
         if (!searchRes.ok) throw new Error("Response Error");
         const searchData = await searchRes.json();
         setTotalUserFound(searchData.total_count);
@@ -51,13 +47,13 @@ function App() {
 
           const profileRes = await fetch(
             `https://api.github.com/users/${debounceTerm}`,
-            { headers, signal },
+            { signal },
           );
           const profile = await profileRes.json();
 
           const repoRes = await fetch(
             `https://api.github.com/users/${topUser}/repos?sort=created&per_page=3&page=${page}`,
-            { headers, signal },
+            { signal },
           );
           const repo = await repoRes.json();
 
