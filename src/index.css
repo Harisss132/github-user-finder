@@ -1,0 +1,7 @@
+@import "tailwindcss";
+@theme { 
+    --font-sans: 'Plus Jakarta Sans', sans-serif; 
+    --font-mono: 'Fira Code', monospace;
+    --font-tight: 'Inter Tight', sans-serif;
+} 
+* { font-family: 'Plus Jakarta Sans', sans-serif; }
