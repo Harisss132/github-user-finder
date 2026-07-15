@@ -15,17 +15,17 @@ function Navbar({ value, onChange }) {
             </div>
             <div>
               <h1 className="font-bold text-3xl tracking-tight">
-                User Github Finder
+                Github User Finder
               </h1>
               <p className="text-gray-200 text-sm">
-                Search your username for looking your github.
+                Search GitHub user and explore their profile information.
               </p>
             </div>
           </li>
           <li>
-            <p className="font-medium text-gray-700 hover:text-black cursor-pointer">
+            <div className="font-medium text-gray-700 hover:text-black cursor-pointer">
               <SearchBar value={value} onChange={onChange}/>
-            </p>
+            </div>
           </li>
         </ul>
       </nav>

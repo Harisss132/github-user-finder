@@ -10,7 +10,7 @@ function RepositoryCard({ repos, currentPage, onPageChange, totalRepos }) {
           ) : (
             repos.map((repo) => (
               <div
-                key={repos.id}
+                key={repo.id}
                 className="p-3 bg-gray-700 rounded border border-gray-600"
               >
                 <a

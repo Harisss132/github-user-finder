@@ -1,12 +1,31 @@
 # GitHub User Finder
 
+![React](https://img.shields.io/badge/React-19-blue)
+![Vite](https://img.shields.io/badge/Vite-7-purple)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-4-06B6D4)
+![License](https://img.shields.io/badge/License-MIT-green)
+
 GitHub User Finder adalah aplikasi web sederhana yang memungkinkan pengguna mencari profil GitHub berdasarkan username. Aplikasi ini menampilkan informasi profil pengguna, jumlah followers/following, serta daftar repository terbarunya. Project ini dibangun menggunakan React dengan hooks seperti useState, useEffect, dan useRef, lalu mengambil data dari GitHub API melalui native fetch, dan menggunakan Tailwind CSS untuk styling.
 
 ## Deskripsi Project
 
 Aplikasi ini bertujuan untuk memberikan pengalaman pencarian pengguna GitHub yang cepat dan intuitif. Setelah pengguna memasukkan nama pengguna, aplikasi akan melakukan request ke API GitHub, lalu menampilkan hasil pencarian dalam bentuk kartu profil dan daftar repository.
 
-linknya disini, silahkan dicek: https://github-user-finder-harisss132.netlify.app
+## Live Demo
+
+🌐 https://github-user-finder-harisss132.netlify.app
+
+## Preview
+
+Berikut beberapa screenshot hasil tampilan aplikasi:
+
+![Halaman utama](docs/images/preview-home-page.png)
+
+![User ditemukan](docs/images/preview-user-found.png)
+
+![User tidak ditemukan](docs/images/preview-user-notfound.png)
+
+![Versi mobile](docs/images/preview-mobile-user-found.png)
 
 ## Fitur Utama
 
@@ -20,15 +39,23 @@ linknya disini, silahkan dicek: https://github-user-finder-harisss132.netlify.ap
 
 ## Tech Stack
 
-- React.js
+Frontend
+
+- React
 - Vite
 - Tailwind CSS
-- React Hooks:
-  - useState
-  - useEffect
-  - useRef
-- Native fetch untuk request HTTP
+
+API
+
 - GitHub REST API
+
+Deployment
+
+- Netlify
+
+Version Control
+
+- Git & GitHub
 
 ## Struktur Project
 
@@ -106,8 +133,8 @@ Pastikan Anda sudah menginstall:
 1. Clone repository:
 
 ```bash
-git clone <repository-url>
-cd githubUserFinder
+git clone <https://github.com/Harisss132/github-user-finder.git>
+cd github-user-finder
 ```
 
 2. Install dependency:
@@ -116,21 +143,13 @@ cd githubUserFinder
 npm install
 ```
 
-3. Buat file environment jika diperlukan:
-
-```bash
-VITE_GITHUB_TOKEN=your_github_token
-```
-
-> Catatan: token GitHub bersifat opsional, namun bisa membantu mengurangi batas rate limit saat melakukan request ke API GitHub.
-
-4. Jalankan aplikasi:
+3. Jalankan aplikasi:
 
 ```bash
 npm run dev
 ```
 
-5. Buka browser dan akses:
+4. Buka browser dan akses:
 
 ```bash
 http://localhost:5173
@@ -151,6 +170,26 @@ npm run build
 - Tidak bergantung pada library tambahan untuk fetch data karena menggunakan native fetch
 - Styling cepat dan fleksibel dengan Tailwind CSS
 
+## Apa yang Saya Pelajari dari Project Ini
+
+- Cara membangun aplikasi React dengan struktur komponen yang terorganisir
+- Penggunaan React Hooks seperti useState, useEffect, dan useRef untuk mengelola state dan efek samping
+- Cara mengambil data dari API GitHub menggunakan fetch dan menangani loading serta error state
+- Penerapan debounce untuk mengurangi request API yang berlebihan saat pengguna mengetik
+- Teknik membuat UI responsif dan menarik dengan Tailwind CSS
+- Pentingnya memecah tampilan menjadi komponen kecil agar kode lebih mudah dipelihara dan dikembangkan
+- Cara mengintegrasikan desain dan fungsionalitas menjadi aplikasi yang lebih nyata dan berguna
+- Menggunakan Promise.all() untuk menjalankan beberapa request API secara bersamaan
+- Menggunakan AbortController untuk membatalkan request yang sudah tidak diperlukan
+
+## Challenges
+
+Selama proses deployment saya mengalami masalah karena GitHub Personal Access Token terdeteksi oleh GitHub Secret Scanning sehingga token otomatis di-revoke.
+
+Dari pengalaman tersebut saya mempelajari bahwa secret atau access token tidak boleh digunakan langsung pada frontend karena seluruh kode frontend akan dikirim ke browser pengguna.
+
+Untuk implementasi production, token sebaiknya disimpan di backend menggunakan environment variable (process.env) agar tetap aman.
+
 ## Kelemahan / Catatan
 
 - Aplikasi ini bergantung pada API GitHub yang memiliki batas rate limit
@@ -167,4 +206,6 @@ npm run build
 
 ## Kesimpulan
 
-GitHub User Finder adalah project sederhana namun solid untuk mempelajari integrasi React, hooks, API fetching, dan Tailwind CSS dalam satu aplikasi yang fungsional dan menarik.
+Project ini dibuat sebagai bagian dari proses pembelajaran React Fundamental dengan fokus pada React Hooks, API Integration, Debouncing, Component Architecture, dan Responsive UI menggunakan Tailwind CSS.
+
+Selain menyelesaikan implementasi fitur utama, project ini juga memberikan pengalaman dalam proses deployment menggunakan Netlify serta debugging permasalahan yang muncul pada lingkungan production.
