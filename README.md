@@ -133,7 +133,7 @@ Pastikan Anda sudah menginstall:
 1. Clone repository:
 
 ```bash
-git clone <https://github.com/Harisss132/github-user-finder.git>
+git clone https://github.com/Harisss132/github-user-finder.git
 cd github-user-finder
 ```
 
